@@ -5,8 +5,6 @@ const request = require('request');
 const cors = require('cors');
 app.use(cors())
 
-console.log("oi")
-
 app.get('/api', (req, res) => {
 
   const url = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/map`;

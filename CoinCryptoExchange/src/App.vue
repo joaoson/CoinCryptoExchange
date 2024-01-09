@@ -6,8 +6,9 @@
   .then(response => response.json())
   .then(data => {
     // Use the received data in your front-end application
-    console.log(data);
-    // Perform actions to display data on your UI
+    console.log(data.data.data[0].name);
+    let moeda = data.data.data[0].name;
+    document.getElementById("nome").innerHTML = moeda
   })
   .catch(error => {
     console.error('Error:', error);
@@ -17,9 +18,9 @@
 </script>
 
 <template>
-  <header>
+  <header id="header">
     <ListBox money="1000" />
-    <GraphicsBox coinName="Joao" coinAbrev="jv" price="300"/>
+    <GraphicsBox :coinName="moeda" coinAbrev="jv" price="300"/>
   </header>
 
   <main>

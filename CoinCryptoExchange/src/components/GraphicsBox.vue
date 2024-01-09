@@ -23,7 +23,7 @@
     <div class="cardHeader">
         <img src="" alt="icon">
         <div class="itemDetails">
-            <h3>{{ coinName }}</h3>
+            <h3 id="nome">{{ coinName }}</h3>
             <h4>{{ coinAbrev }}</h4>
         </div>
     </div>
