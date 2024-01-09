@@ -5,7 +5,7 @@
 
 <template>
   <header>
-    <ListBox msg="" />
+    <ListBox money="1000" />
     <GraphicsBox coinName="Joao" coinAbrev="jv" price="300"/>
   </header>
 
