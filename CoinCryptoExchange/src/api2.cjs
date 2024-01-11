@@ -3,6 +3,22 @@ const express = require('express');
 const app = express();
 const request = require('request');
 const cors = require('cors');
+var mysql = require('mysql');
+//import mysql from "mysql2"
+
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "PUC@2023",
+  database: "cryptocoindb"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+})
+
 app.use(cors())
 
 app.get('/api', (req, res) => {
@@ -24,6 +40,14 @@ app.get('/api', (req, res) => {
         error: error
       });
     }
+    // console.log(data.data.length)
+    //   for(let i = 0;i<data.data.length;i++){
+    //     var sql = `INSERT INTO Coins (id, name,quotes) VALUES (${data.data[i].id}, "${data.data[i].name}",0)`;
+    //     con.query(sql, function (err, result) {
+    //       if (err) throw err;
+    //       console.log("1 record inserted");
+    //     });
+    //   }
     res.send({
       data: data
     });
