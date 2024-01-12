@@ -14,7 +14,7 @@
             required: true
         },
         percentile: {
-            type: String,
+            type: Number,
             required: false,
             default:"oie"
         },
@@ -38,8 +38,8 @@
         </div>
         <div class="graphics">
             <div class="numbers">
-                <p>{{ price }}</p>
-                <p>{{ percentile }}</p>
+                <p class="price">{{ price }}</p>
+                <p>{{ percentile }}%</p>
             </div>
     
         </div>
@@ -52,6 +52,9 @@
         width:  60%;
         max-width: 40px;
         max-height: 40px;
+        background-color: #31353f;
+        padding: 0.5rem;
+        border-radius: 10px;
     }
 
     .graphicBox{
@@ -59,16 +62,41 @@
         width: 100%;
         flex-wrap: wrap;
         height: auto;
+        justify-content: center;
+        background-color: #1b2028;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 10px;
     }
 
     .cardHeader{
         width: 100%;
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
     .itemDetails{
         display: flex;
         align-items: center;
+        justify-content: space-around;
+        align-items: center;
+        width: 70%;
+    }
+    .itemDetails h3{
+        margin: 0;
+    }
+    .graphics{
+        width: 100%;
+    }
+
+    .numbers{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .numbers .price{
+        font-weight: bold;
     }
     
 </style>

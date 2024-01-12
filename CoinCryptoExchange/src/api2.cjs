@@ -23,9 +23,9 @@ app.use(cors())
 
 app.get('/api', (req, res) => {
 
-  const url = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/map`;
+  const url = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest`;
 
-  const url2 = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/map`;
+  const url2 = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest`;
 
   request.get({
     url: url2,
